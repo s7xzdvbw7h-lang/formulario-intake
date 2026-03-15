@@ -271,7 +271,7 @@ export default function App() {
       s.fields.forEach(f => { const v = data[f.id]; if (v !== undefined && v !== "") body += `${f.label}\n→ ${v}\n\n`; });
     });
     try {
-      await fetch("https://formsubmit.co/ajax/daninavarrocoach@gmail.com", {
+      await fetch("https://formsubmit.co/ajax/hola@daninavarro.com.ar", {
         method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({ _subject: `✦ Nuevo Intake: ${data.nombre||"Paciente"}`, _template: "box", nombre: data.nombre||"", email: data.email||"", telefono: data.telefono||"", mensaje_completo: body }),
       });
